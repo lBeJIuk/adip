@@ -34,12 +34,17 @@ then
   INPUT_USERNAME=${GITHUB_ACTOR}
 fi
 
+if [ -z "$INPUT_CONTEXT" ]
+then
+  INPUT_CONTEXT="./"
+fi
+
 # Username must be in lowercase
 INPUT_USERNAME=$(echo $INPUT_USERNAME | tr '[:upper:]' '[:lower:]')
 APP_VERSION=${GITHUB_SHA:0:12}
 package="${INPUT_REGISTRY}/${INPUT_USERNAME}/${INPUT_PACKAGE_REPOSITORY}/${INPUT_APP_NAME}"
 
-docker build --tag "${package}:${APP_VERSION}" --tag "${package}:latest" ./
+docker build --tag "${package}:${APP_VERSION}" --tag "${package}:latest" $INPUT_CONTEXT
 
 if [ $INPUT_TOKEN ]
 then
