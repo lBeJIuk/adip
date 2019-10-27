@@ -1,7 +1,9 @@
 name: 'Docker iamge publischer'
 description: 'Docker image publush'
 author: 'lBeJIuk'
-icon: 'box'
+branding:
+  icon: 'box'  
+  color: 'green'
 
 inputs:
   PASSWORD:
