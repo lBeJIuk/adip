@@ -2,6 +2,26 @@ name: 'adip'
 description: 'Docker image publush'
 author: 'lBeJIuk'
 
+inputs:
+  PASSWORD:
+    description: 'Variable for password'
+    required: true
+  TOKEN:
+    description: 'Variable for token'
+    required: true
+  PACKAGE_REPOSITORY:
+    descriptions: 'Variable for repository'
+    required: true
+  REGISTRY:
+    description: 'Variable image registry'
+    default: 'docker.pkg.github.com'
+  APP_NAME:
+    description: 'Variable for app name'
+    default: 'repository name'
+  USERNAME:
+    description: 'Variable for username'
+    default: 'GIthub user name'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
