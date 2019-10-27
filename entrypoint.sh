@@ -1,3 +1,5 @@
+#!/bin/sh
+
 set -e
 
 if [ -z "$INPUT_PASSWORD" ] &&  [ -z "$INPUT_TOKEN" ]
