@@ -1,0 +1,7 @@
+name: 'adip'
+description: 'Docker image publush'
+author: 'lBeJIuk'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
