@@ -31,7 +31,7 @@ then
 fi
 
 INPUT_USERNAME=${INPUT_USERNAME,,}
-APP_VERSION=$(echo "${GITHUB_SHA}" | cut -c1-12)
+APP_VERSION=${GITHUB_SHA:0:12}
 package="${INPUT_REGISTRY}/${INPUT_USERNAME}/${INPUT_PACKAGE_REPOSITORY}/${INPUT_APP_NAME}"
 
 docker build --tag "${package}:${APP_VERSION}" --tag "${package}:latest" ./
