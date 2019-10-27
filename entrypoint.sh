@@ -2,14 +2,14 @@ set -e
 
 if [ -z "$INPUT_PASSWORD" ] &&  [ -z "$INPUT_TOKEN" ]
 then
-	echo "Set the PASSWORD or TOKEN input."
-	exit 1
+  echo "Set the PASSWORD or TOKEN input."
+  exit 1
 fi
 
 if [ -z "$INPUT_PACKAGE_REPOSITORY" ]
 then
-	echo "Set the PACKAGE_REPOSITORTY input."
-	exit 1
+  echo "Set the PACKAGE_REPOSITORTY input."
+  exit 1
 fi
 
 
@@ -25,7 +25,7 @@ fi
 
 if [ -z "$INPUT_USERNAME" ]
 then
-  INPUT_USERNAME=${GITHUB_REPOSITORY%%/*}
+  INPUT_USERNAME=${GITHUB_ACTOR}
 fi
 
 
