@@ -20,14 +20,10 @@ inputs:
     default: 'docker.pkg.github.com'
   APP_NAME:
     description: 'Variable for app name'
-    default: 'repository name'
   USERNAME:
     description: 'Variable for username'
-    default: 'GIthub user name'
   CONTEXT:
     description: 'Shows where the Dockerfile is'
-    default: './'
-  
 
 runs:
   using: 'docker'
