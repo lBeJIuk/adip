@@ -41,6 +41,8 @@ fi
 
 # Username must be in lowercase
 INPUT_USERNAME=$(echo $INPUT_USERNAME | tr '[:upper:]' '[:lower:]')
+# App name must be in lowercase
+INPUT_APP_NAME=$(echo $INPUT_APP_NAME | tr '[:upper:]' '[:lower:]')
 APP_VERSION=${GITHUB_SHA:0:12}
 package="${INPUT_REGISTRY}/${INPUT_USERNAME}/${INPUT_PACKAGE_REPOSITORY}/${INPUT_APP_NAME}"
 
